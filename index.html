@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Expense Reimbursement Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Reimbursement</h1>
+    <form id="expenseForm">
+      <input type="text" id="description" placeholder="Expense Description" required />
+      <input type="number" id="amount" placeholder="Amount" step="0.01" required />
+      <input type="date" id="date" required />
+      <input type="file" id="receipt" accept="image/*,application/pdf" />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th><th>Amount</th><th>Date</th><th>Receipt</th><th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="expenseList"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
